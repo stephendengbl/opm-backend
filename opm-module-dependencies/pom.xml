@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>opm</artifactId>
+        <groupId>com.h3c</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <artifactId>opm-module-dependencies</artifactId>
+    <packaging>pom</packaging>
+
+    <dependencies>
+        <!-- IT COMMON 组件, 根据需要进行选配 -->
+        <!-- security 认证鉴权组件 -->
+        <dependency>
+            <groupId>com.h3c</groupId>
+            <artifactId>it-common-security-starter</artifactId>
+        </dependency>
+
+        <!-- web 应用构建组件 -->
+        <dependency>
+            <groupId>com.h3c</groupId>
+            <artifactId>it-common-web-starter</artifactId>
+        </dependency>
+
+        <!-- 接口文档组件（默认地址/doc.html） -->
+        <dependency>
+            <groupId>com.h3c</groupId>
+            <artifactId>it-common-swagger-starter</artifactId>
+        </dependency>
+
+        <!-- mybatis-plus 组件 -->
+        <dependency>
+            <groupId>com.h3c</groupId>
+            <artifactId>it-common-mybatis-plus-starter</artifactId>
+        </dependency>
+
+        <!-- 配置中心组件 -->
+        <dependency>
+            <groupId>com.h3c</groupId>
+            <artifactId>it-common-nacos-starter</artifactId>
+        </dependency>
+
+        <!-- 国际化i18n组件-->
+        <dependency>
+            <groupId>com.h3c</groupId>
+            <artifactId>it-common-i18n-starter</artifactId>
+        </dependency>
+
+        <!-- 日志中心组件 -->
+        <dependency>
+            <groupId>com.h3c</groupId>
+            <artifactId>it-common-logging-starter</artifactId>
+        </dependency>
+
+
+        <!-- RPC调用组件 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <version>3.1.1</version>
+        </dependency>
+
+        <!--流控防护组件（限流、流量整形、熔断降级、系统负载保护、热点防护等功能）-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+            <version>2021.0.1.0</version>
+        </dependency>
+
+        <!--  注意：springboot2.6的test基于junit5，使用时按需替换junit版本，或者修改单元测试代码 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+</project>

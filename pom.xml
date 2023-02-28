@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.h3c</groupId>
+        <artifactId>it-common-parent</artifactId>
+        <version>1.0.0.RELEASE</version>
+    </parent>
+
+
+    <artifactId>opm</artifactId>
+    <groupId>com.h3c</groupId>
+    <version>0.0.1-SNAPSHOT</version>
+    <description>Demo project for Spring Boot</description>
+
+    <packaging>pom</packaging>
+
+    <modules>
+       <module>opm-server</module>
+       <module>opm-module-project</module>
+       <module>opm-module-goal</module>
+       <module>opm-module-task</module>
+       <module>opm-module-system</module>
+       <module>opm-module-dependencies</module>
+       <module>opm-module-infra</module>
+    </modules>
+
+
+    <properties>
+        <java.version>1.8</java.version>
+        <maven.test.skip>true</maven.test.skip>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
+
+    <dependencies>
+        <!-- hutool 工具集 -->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+        </dependency>
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <!-- id必须唯一 -->
+            <id>eos-public</id>
+            <!-- 仓库的url地址 -->
+            <url>http://nexus.eos.h3c.com/repository/maven-public/</url>
+            <releases>
+            </releases>
+        </repository>
+    </repositories>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
